@@ -8,6 +8,13 @@ Telemetry:
   Sampler: 1.0
   Batcher: jaeger
 
+Timeout: 10000
+Telemetry:
+  Name: order.api
+  Endpoint: http://jaeger:14268/api/traces
+  Sampler: 1.0
+  Batcher: jaeger
+
 Etcd:
   Hosts:
     - etcd:2379
