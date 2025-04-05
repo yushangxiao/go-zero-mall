@@ -2,6 +2,13 @@ Name: User
 Host: 0.0.0.0
 Port: 8000
 
+Timeout: 10000
+Telemetry:
+  Name: order.api
+  Endpoint: http://jaeger:14268/api/traces
+  Sampler: 1.0
+  Batcher: jaeger
+  
 Mysql:
   DataSource: root:123456@tcp(mysql:3306)/mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
 
